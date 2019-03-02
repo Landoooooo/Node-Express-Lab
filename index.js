@@ -4,6 +4,8 @@ const apiRoutes = require('./api/apiRoutes.js');
 
 const server = express();
 
+server.use(express.json());
+
 server.get('/', (req,res) => res.send('API up and running'));
 
 server.use('/api', apiRoutes);
